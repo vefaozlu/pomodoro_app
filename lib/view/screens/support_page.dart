@@ -4,7 +4,7 @@ import 'package:pomodoro_app/colors.dart';
 class SupportPage extends StatelessWidget {
   const SupportPage({ Key? key }) : super(key: key);
   static const routeName = 'supportPage';
-  
+
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -18,6 +18,7 @@ class SupportPage extends StatelessWidget {
             color: PomodoroColors.color2,
             borderRadius: BorderRadius.circular(15),
           ),
+          child: Text('aaa'),
         ),
       ),
     );
