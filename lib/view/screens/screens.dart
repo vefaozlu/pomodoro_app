@@ -1,0 +1,10 @@
+export 'goal_input_page.dart';
+export 'goals_page.dart';
+export 'history_page.dart';
+export 'main_page.dart';
+export 'timer_page.dart';
+export 'profile_page.dart';
+export 'settings_page.dart';
+export 'quotes_page.dart';
+export 'information_page.dart';
+export 'support_page.dart';
