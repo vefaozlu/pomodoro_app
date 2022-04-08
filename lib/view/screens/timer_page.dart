@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pomodoro_app/colors.dart';
 import 'package:pomodoro_app/view/widgets/widgets.dart';
 import 'package:pomodoro_app/view_model/view_model.dart';
 
@@ -30,7 +31,6 @@ class TimerPage extends StatelessWidget {
               },
             ),
           ),
-          // TODO Rewrite This Widget.
           Flexible(
             fit: FlexFit.loose,
             flex: 45,
@@ -50,19 +50,69 @@ class TimerCompleted extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text('Session Completed'),
+        const Text(
+          'Session Completed',
+          style: TextStyle(
+            color: PomodoroColors.color3,
+            fontSize: 28,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(height: 25),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextButton(
-              child: const Text('Give A Break'),
-              onPressed: () =>
-                  context.read<TimerBloc>().add(const StartNewSession(false)),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: MaterialButton(
+                child: Container(
+                  width: 200,
+                  decoration: BoxDecoration(
+                    color: PomodoroColors.color2,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: const Center(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(vertical: 10.0),
+                      child: Text(
+                        'Give A Break',
+                        style: TextStyle(
+                          color: PomodoroColors.color3,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                onPressed: () =>
+                    context.read<TimerBloc>().add(const StartNewSession(false)),
+              ),
             ),
-            TextButton(
-              child: const Text('Study'),
-              onPressed: () =>
-                  context.read<TimerBloc>().add(const StartNewSession(true)),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: MaterialButton(
+                child: Container(
+                  width: 200,
+                  decoration: BoxDecoration(
+                    color: PomodoroColors.color2,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: const Center(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(vertical: 10.0),
+                      child: Text(
+                        'Study',
+                        style: TextStyle(
+                          color: PomodoroColors.color3,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                onPressed: () =>
+                    context.read<TimerBloc>().add(const StartNewSession(true)),
+              ),
             ),
           ],
         ),
