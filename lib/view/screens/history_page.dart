@@ -273,6 +273,8 @@ class _PieChartViewState extends State<PieChartView> {
 
   List<PieChartSectionData> sections(
       int touchedIndex, List<DailyHistory> items) {
+    final Size size = MediaQuery.of(context).size;
+    double radius = size.width > size.height ? 100 : size.width * .35;
     return List.generate(
       items.length,
       (index) {
@@ -286,9 +288,7 @@ class _PieChartViewState extends State<PieChartView> {
             color: Colors.white,
             fontSize: 16,
           ),
-          radius: touchedIndex == index
-              ? MediaQuery.of(context).size.width * .35
-              : MediaQuery.of(context).size.width * .3,
+          radius: touchedIndex == index ? radius * 1.2 : radius,
         );
       },
     );
