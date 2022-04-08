@@ -49,7 +49,7 @@ class _QuotesViewState extends State<QuotesView> {
                   child: const Padding(
                     padding: EdgeInsets.symmetric(vertical: 20.0),
                     child: Text(
-                      'AAAAAA',
+                      "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.\nAlber Einstein",
                       textAlign: TextAlign.center,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
@@ -85,13 +85,5 @@ class Quotes {
     'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Zm9yZXN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
     'https://images.unsplash.com/photo-1511207538754-e8555f2bc187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Zm9yZXN0fGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60',
     'https://images.unsplash.com/photo-1496060169243-453fde45943b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGZvcmVzdHxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60',
-  ];
-
-  List<String> quotes = [
-    'Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-    'Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb',
-    'Cccccccccccccccccccccccccccccccccc',
-    'Dddddddddddddddddddddddddddddddddd',
-    'Eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
   ];
 }
