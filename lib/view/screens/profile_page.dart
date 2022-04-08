@@ -32,7 +32,7 @@ class ProfilePage extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.all(8.0),
             child: Text(
-              'Kadir',
+              'User',
               style: TextStyle(fontSize: 28, color: PomodoroColors.color3),
             ),
           ),
