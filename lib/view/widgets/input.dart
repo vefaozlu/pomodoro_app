@@ -37,6 +37,7 @@ class Input extends StatelessWidget {
             fontSize: 21,
           ),
           decoration: const InputDecoration(
+            errorStyle: TextStyle(color: PomodoroColors.color3),
             border: InputBorder.none,
           ),
           validator: (value) => validator(value),
@@ -45,54 +46,3 @@ class Input extends StatelessWidget {
     );
   }
 }
-/* 
-class Input extends StatefulWidget {
-  const Input(
-      {Key? key,
-      this.text,
-      this.controller,
-      required this.maxLines,
-      required this.validator,
-      required this.onChanged})
-      : super(key: key);
-
-  final String? text;
-  final TextEditingController? controller;
-  final int maxLines;
-  final Function validator;
-  final Function onChanged;
-
-  @override
-  State<Input> createState() => _InputState();
-}
-
-class _InputState extends State<Input> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.indigoAccent,
-        borderRadius: BorderRadius.circular(25),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(5.0),
-        child: TextFormField(
-          initialValue: widget.text,
-          cursorColor: Colors.white,
-          textAlign: TextAlign.center,
-          maxLines: widget.maxLines,
-          onChanged: (input) => widget.onChanged(input),
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 21,
-          ),
-          decoration: const InputDecoration(
-            border: InputBorder.none,
-          ),
-          validator: (value) => widget.validator(value),
-        ),
-      ),
-    );
-  }
-}
- */
