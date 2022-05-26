@@ -88,7 +88,7 @@ class _GoalsViewState extends State<GoalsView> {
           physics: const BouncingScrollPhysics(),
           itemCount: widget.goals.length,
           itemBuilder: (context, index) {
-            return A(
+            return GoalTile(
                 goal: widget.goals[index],
                 goToInitialPage: widget.goToInitialPage,
                 pushGoalInputPage: widget.pushGoalInputPage);
